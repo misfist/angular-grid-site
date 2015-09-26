@@ -3,6 +3,7 @@
 *.swp
 /node_modules/
 bower_components/
+assets/vendor/
 .lvimrc
 libpeerconnection.log
 npm-debug.log
