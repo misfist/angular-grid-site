@@ -1,0 +1,128 @@
+// Variables
+
+//
+// Variable format should follow the `$component-modifier-state-property` order.
+
+
+// Colors
+//
+
+$gray: rgb(111, 111, 111);
+$brand-primary: rgb(0, 140, 186);
+$brand-success: rgb(67, 172, 106);
+$brand-warning: rgb(233, 144, 2);
+$brand-danger: rgb(240, 65, 36);
+
+$black: #333;
+$white: #fff;
+
+
+// Options
+//
+// Quickly modify global styling by enabling or disabling optional features.
+
+$enable-flex:               true;
+
+// Typography
+//
+// Font, line-height, and color for body text, headings, and more.
+$font-family-sans-serif:      "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$headings-font-family: $font-family-base;
+
+$table-bg-accent: $gray-lightest;
+$table-bg-hover: $gray-lightest;
+
+
+$border-radius: 0;
+$border-radius-sm: 0;
+
+
+// Navbar
+
+$navbar-height: 45px;
+$navbar-default-color: $black;
+$navbar-default-bg: $gray-dark;
+$navbar-default-link-color: $black;
+$navbar-default-link-hover-color: $black;
+$navbar-default-link-hover-bg: $gray-dark;
+$navbar-default-link-active-color: $black;
+$navbar-default-link-active-bg: $gray-dark;
+$navbar-default-toggle-hover-bg: transparent;
+$navbar-default-toggle-icon-bar-bg: $black;
+$navbar-default-toggle-border-color: transparent;
+
+$navbar-inverse-color: $black;
+$navbar-inverse-bg: $brand-primary;
+$navbar-inverse-link-color: $black;
+$navbar-inverse-link-hover-bg: darken($navbar-inverse-bg, 10%);
+$navbar-inverse-link-active-color: $black;
+$navbar-inverse-toggle-hover-bg: transparent;
+$navbar-inverse-toggle-border-color: transparent;
+
+$nav-tabs-border-color: $table-border-color;
+$nav-tabs-active-link-hover-border-color: $table-border-color;
+$nav-tabs-justified-link-border-color: $table-border-color;
+
+
+// Pagination
+
+$pagination-bg: transparent;
+$pagination-border: transparent;
+$pagination-hover-border: transparent;
+$pagination-active-border: transparent;
+$pagination-disabled-border: transparent;
+
+
+// Pager
+
+$pager-border-radius: $border-radius;
+
+
+// Jumbotron
+
+$jumbotron-bg: $white;
+
+
+// Form states and alerts
+//
+// Define colors for form feedback states and, by default, alerts.
+
+$state-success-text: $brand-success;
+$state-info-text: $brand-info;
+$state-warning-text: $brand-warning;
+$state-danger-text: $brand-danger;
+
+
+// Tooltips
+
+$tooltip-color:               $gray-dark;
+$tooltip-bg:                  $gray-lighter;
+$tooltip-arrow-color:         $tooltip-bg;
+
+// Modals
+
+$modal-inner-padding: 20px;
+
+
+// Alerts
+//
+
+$alert-success-text: $black;
+$alert-info-text: $black;
+$alert-warning-text: $black;
+$alert-danger-text: $black;
+
+
+// List group
+
+$list-group-border: $table-border-color;
+
+
+// Breadcrumbs
+
+$breadcrumb-color: $gray-light;
+
+
+// Close
+
+$close-color: $black;

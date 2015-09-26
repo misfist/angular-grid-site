@@ -1,0 +1,31 @@
+{
+  "name": "angular-grid",
+  "version": "1.0.0",
+  "authors": [
+    "Pea <pea@misfist.com>"
+  ],
+  "description": "Angular site that displays content in a grid",
+  "main": "index.html",
+  "keywords": [
+    "angularjs",
+    "responsive",
+    "grid"
+  ],
+  "license": "GPLv3",
+  "homepage": "https://github.com/misfist/angular-grid-site",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.4.6",
+    "bootstrap": "~4.0.0",
+    "angular-route": "~1.4.6",
+    "angular-resource": "~1.4.6",
+    "angular-sanitize": "~1.4.6",
+    "angular-underscore-module": "~1.0.1"
+  }
+}
