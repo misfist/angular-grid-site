@@ -24,4 +24,16 @@ var app = angular.module( 'app-directives', [] )
             //controller: controllerFunction, //Embed a custom controller in the directive
             //link: function ( $scope, element, attrs ) { } //DOM manipulation
         }
+    })
+    .directive( 'articleListDirective', function () {
+        return {
+            restrict: 'EA', //E = element, A = attribute, C = class, M = comment         
+            templateUrl: VIEWS_DIR + 'content/article-list.html',
+        }
+    })
+    .directive( 'articleDirective', function () {
+        return {
+            restrict: 'EA', //E = element, A = attribute, C = class, M = comment         
+            templateUrl: VIEWS_DIR + 'content/article.html',
+        }
     });

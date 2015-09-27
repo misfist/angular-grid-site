@@ -21,7 +21,12 @@ $white: #fff;
 //
 // Quickly modify global styling by enabling or disabling optional features.
 
-$enable-flex:               true;
+$enable-flex: true;
+$enable-shadows: true;
+$enable-gradients: true;
+$enable-transitions: true;
+$enable-hover-media-query: true;
+
 
 // Typography
 //

@@ -31,7 +31,7 @@
         $routeProvider
             .when( '/', {
                 templateUrl: VIEWS_DIR + 'main.html',
-                //controller: 'MainCtrl',
+                controller: 'PostCtrl',
                 title: 'Home'
             } )
             .otherwise( {
@@ -46,9 +46,22 @@
 
 console.log( 'controllers.js Loaded' );
 
-var app = angular.module( 'app-controllers', [] )
+var app = angular.module( 'app-controllers', ['underscore'] )
     .controller( 'MainCtrl', function() {
-        console.log( 'app-controllers Loaded' );
+        console.log( 'MainCtrl Loaded' );
+    } )
+    .controller( 'PostCtrl', function( $scope, Posts ) {
+
+        console.log( 'PostCtrl Loaded' );
+
+        Posts.query( function( posts ) {
+
+            $scope.posts = posts;
+
+        } );
+
+        
+
     } );
 /*jslint white: true */
 
@@ -76,6 +89,18 @@ var app = angular.module( 'app-directives', [] )
             //controller: controllerFunction, //Embed a custom controller in the directive
             //link: function ( $scope, element, attrs ) { } //DOM manipulation
         }
+    })
+    .directive( 'articleListDirective', function () {
+        return {
+            restrict: 'EA', //E = element, A = attribute, C = class, M = comment         
+            templateUrl: VIEWS_DIR + 'content/article-list.html',
+        }
+    })
+    .directive( 'articleDirective', function () {
+        return {
+            restrict: 'EA', //E = element, A = attribute, C = class, M = comment         
+            templateUrl: VIEWS_DIR + 'content/article.html',
+        }
     });
 /*jslint white: true */
 
@@ -85,13 +110,25 @@ console.log( 'app-factory Loaded' );
 
 /*jslint white: true */
 
-var app = angular.module( 'app-filters', [] );
-
 console.log( 'app-filters Loaded' );
+
+var app = angular.module( 'app-filters', [] )
+.filter( 'rawHtml', ['$sce', function( $sce ){
+  return function( content ) {
+    return $sce.trustAsHtml( content );
+  };
+}]);
+
 
 /*jslint white: true */
 
-var app = angular.module( 'app-services', [] );
-
 console.log( 'app-services Loaded' );
+
+var app = angular.module( 'app-services', [] )
+.factory( 'Posts', function( $resource ) {
+
+    console.log( 'Posts service Loaded' );
+    return $resource( 'http://abandonedstroller.com/wp-json/wp/v2/posts/:id' );
+
+} );
 

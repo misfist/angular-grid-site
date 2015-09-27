@@ -10,6 +10,7 @@ var gulp = require('gulp'),
     include = require( 'gulp-include' ),
     sass = require( 'gulp-sass' ),
     minifycss = require( 'gulp-minify-css' ),
+    prefixer = require('gulp-autoprefixer'),
     jshint = require( 'gulp-jshint' ),
     stylish = require( 'jshint-stylish' ),
     uglify = require( 'gulp-uglify' ),
@@ -30,6 +31,7 @@ gulp.task( 'sass', function() {
     } )
     .pipe( plumber( { errorHandler: onError } ) )
     .pipe( sass() )
+    .pipe( prefixer ( {browsers:['last 2 versions'] } ) )
     .pipe( gulp.dest( './assets/css' ) )
     .pipe( minifycss() )
     .pipe( rename( { suffix: '.min' } ) )
@@ -50,17 +52,6 @@ gulp.task('scripts', function() {
     .pipe( notify( { message: 'Scripts task complete' } ) )
     .pipe( livereload() );
 });
-
-// gulp.task('js-fef', function(){
-//     return gulp.src(['file1.js', 'file2.js', 'file3.js'])
-//         .pipe(gp_sourcemaps.init())
-//         .pipe(gp_concat('concat.js'))
-//         .pipe(gulp.dest('dist'))
-//         .pipe(gp_rename('uglify.js'))
-//         .pipe(gp_uglify())
-//         .pipe(gp_sourcemaps.write('./'))
-//         .pipe(gulp.dest('dist'));
-// });
 
 gulp.task('images', function () {
     return gulp.src('src/images/*')

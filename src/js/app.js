@@ -31,7 +31,7 @@
         $routeProvider
             .when( '/', {
                 templateUrl: VIEWS_DIR + 'main.html',
-                //controller: 'MainCtrl',
+                controller: 'PostCtrl',
                 title: 'Home'
             } )
             .otherwise( {

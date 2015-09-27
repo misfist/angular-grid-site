@@ -1,0 +1,13 @@
+.navbar-nav {
+
+    @extend .pull-right;
+
+    li {
+        @extend .nav-item;
+
+        a {
+            @extend .nav-link;
+        }
+    }
+
+}

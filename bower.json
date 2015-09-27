@@ -26,6 +26,7 @@
     "angular-route": "~1.4.6",
     "angular-resource": "~1.4.6",
     "angular-sanitize": "~1.4.6",
-    "angular-underscore-module": "~1.0.1"
+    "angular-underscore-module": "~1.0.1",
+    "font-awesome": "~4.4.0"
   }
 }

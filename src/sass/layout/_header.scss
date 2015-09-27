@@ -1,0 +1,14 @@
+.site-header,
+.site-footer {
+    @extend .navbar;
+    @extend .bg-inverse;
+    @extend .navbar-dark;
+}
+
+.site-header {
+    @extend .navbar-fixed-top;
+
+    .site-name {
+        @extend .navbar-brand;
+    }
+}
